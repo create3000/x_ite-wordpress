@@ -39,6 +39,10 @@ different browsers across several different operating systems.
 
 == Changelog ==
 
+= 1.0.4 =
+
+* Changed servers
+
 = 1.0.2 =
 * Added minified version option
 

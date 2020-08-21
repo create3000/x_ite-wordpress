@@ -3,7 +3,7 @@
 Plugin Name: X_ITE
 Plugin URI: http://wordpress.org/plugins/x_ite/
 Description: [X3DCanvas src="https://cdn.rawgit.com/create3000/Library/master/Examples/X_ITE/info.x3d" width="100%" height="500"] shortcode
-Version: 1.0.3
+Version: 1.0.4
 Author: create3000
 Author URI: http://create3000.de/x_ite/
 License: GPLv3
@@ -78,7 +78,7 @@ function x_ite_options_page ()
 	<fieldset>
 		<legend><h2>Links</h2></legend>
 		<p>
-			<a href="http://create3000.de/x_ite/" target="_blank">Home Page</a> |
+			<a href="https://github.com/create3000/x_ite/wiki" target="_blank">Home Page</a> |
 			<a href="https://github.com/create3000/x_ite" target="_blank">GitHub</a>
 		</p>
 	</fieldset>
@@ -95,10 +95,8 @@ function x_ite_options_page ()
 					<th scope="row">Host</th>
 					<td>
 						<select name="x_ite_options_host">
-							<option value="0" <?php if ($host == '0' ) echo 'selected="selected"'; ?>>https://code.create3000.de</option>
+							<option value="0" <?php if ($host == '0' ) echo 'selected="selected"'; ?>>https://create3000.github.io</option>
 							<option value="1" <?php if ($host == '1' ) echo 'selected="selected"'; ?>>https://cdn.jsdelivr.net</option>
-							<option value="2" <?php if ($host == '2' ) echo 'selected="selected"'; ?>>https://cdn.rawgit.com</option>
-							<option value="3" <?php if ($host == '3' ) echo 'selected="selected"'; ?>>https://rawgit.com (developer only)</option>
 						</select>
 					</td>
 				</tr>
@@ -195,10 +193,8 @@ function x_ite_enqueue_scripts_impl ()
 	if ($version == '') $version = 'latest';
 
 	$hosts = array (
-		'0' => 'https://code.create3000.de/x_ite/VERSION/dist/',
+		'0' => 'https://create3000.github.io/code/x_ite/VERSION/dist/',
 		'1' => 'https://cdn.jsdelivr.net/gh/create3000/x_ite@VERSION/dist/',
-		'2' => 'https://cdn.rawgit.com/create3000/x_ite/VERSION/dist/',
-		'3' => 'https://rawgit.com/create3000/x_ite/VERSION/dist/',
 	);
 
 	if ($version == 'alpha')
